@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Hello";
+}
+
+<h2>@ViewBag.Msg</h2>
+<h4>@ViewData["Msg"]</h4>
+
+<hr />
+
+<table class="table" style="width:fit-content">
+    @for (int i = 1; i <= 5; i++)
+    {
+        <tr>
+            <td>
+                5
+            </td>
+            <td>
+                x
+            </td>
+            <td>
+                @i
+            </td>
+            <td>
+                =
+            </td>
+            <td>
+                @(5*i)
+            </td>
+        </tr>
+    }
+</table>

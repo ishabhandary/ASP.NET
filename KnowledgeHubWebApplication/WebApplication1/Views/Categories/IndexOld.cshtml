@@ -1,0 +1,22 @@
+﻿@model List<WebApplication1.Models.Entities.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<table border="1" class="table">
+    <tr>
+        <th>Category Id</th>
+        <th>Category Name</th>
+        <th>Category Description</th>
+    </tr>
+    @foreach (var item in @Model)
+    {
+        <tr>
+            <td>@item.CategoryId</td>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+        </tr>
+    }
+</table>
+

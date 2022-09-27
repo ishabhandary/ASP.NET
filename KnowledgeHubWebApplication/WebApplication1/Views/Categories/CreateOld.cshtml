@@ -1,0 +1,30 @@
+﻿@model WebApplication1.Models.Entities.Category
+
+@{
+    ViewBag.Title = "Create";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+@*Use these files in same order*@
+<h2>Create Category</h2>
+<hr />
+
+@*<form action="save" method="post">*@
+@using (Html.BeginForm())
+{
+    @*<label for="name">Enter category name:</label>*@
+    <!--@Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)@Html.ValidationMessageFor(m => m.Name)
+    <br />
+    <br />-->
+   @* <label for="description">Enter category description:</label>*@
+    <!--@Html.LabelFor(m => m.Description)
+    @Html.TextAreaFor(m => m.Description)-->
+
+    @*<textarea name="description" rows="6" cols="60"></textarea><hr />*@
+    @Html.ValidationSummary()
+    @Html.EditorFor(m=>m)
+    <input type="submit" name="btnSubmit" value="Create" />
+}
+@*</form*@
